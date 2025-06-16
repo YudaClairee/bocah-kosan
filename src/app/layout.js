@@ -33,8 +33,8 @@ export default function RootLayout({ children }) {
             <Image
               alt="Logo alternatif"
               height={100}
-              width={150}
-              src="/images/logoapp.png"
+              width={200}
+              src="/images/logoapp-transparent.png"
             />
           </nav>
           <main className="flex-1 max-w-5xl m-auto px-4 pb-8">{children}</main>

@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { DeleteButton, Form } from "./form";
 import { getUsername } from "@/utils/getUsername";
 import EditButtonWithDialog from "./EditButtonWithDialog";
+import Link from "next/link";
 
 export default async function page() {
   const username = await getUsername();
@@ -12,13 +13,21 @@ export default async function page() {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
-      <div className="mb-6">
-        <h3 className="text-xl sm:text-2xl text-[#647A3F]">
-          Haloo, paguyuban <span className="font-bold">{username}</span>
-        </h3>
-        <p className="mb-3 text-sm sm:text-base text-[#647A3F]">
-          Lo bisa atur tugas penghuni kos lu dengan isi form di bawah!
-        </p>
+      <div className="mb-6 flex justify-between items-center">
+        <div>
+          <h3 className="text-xl sm:text-2xl text-[#647A3F]">
+            Haloo, paguyuban <span className="font-bold">{username}</span>
+          </h3>
+          <p className="mb-3 text-sm sm:text-base text-[#647A3F]">
+            Lo bisa atur tugas penghuni kos lu dengan isi form di bawah!
+          </p>
+        </div>
+        <Link
+          className="bg-[#647A3F] px-3 py-1 text-white font-semibold rounded"
+          href="/"
+        >
+          Kembali
+        </Link>
       </div>
 
       <div className="space-y-4 mb-6">
