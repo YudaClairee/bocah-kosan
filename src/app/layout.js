@@ -1,5 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +26,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${inter.className} min-h-screen antialiased bg-orange-50`}
       >
-        {children}
+        <div className="min-h-screen flex flex-col">
+          <nav className="w-screen flex justify-center items-center py-10">
+            <Image
+              alt="Logo alternatif"
+              height={100}
+              width={150}
+              src="/images/logoapp.png"
+            />
+          </nav>
+          <main className="flex-1 max-w-5xl m-auto px-4 pb-8">{children}</main>
+          <footer className="bg-[#d68f37] text-white p-4 flex justify-center items-center font-bold">
+            Made by Djibrani Yuda
+          </footer>
+        </div>
       </body>
     </html>
   );
