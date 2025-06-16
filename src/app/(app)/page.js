@@ -34,7 +34,7 @@ export default function Home() {
         </h2>
         <Card className="w-[350px]">
           <CardContent>
-            <form action={action}>
+            <form className="space-y-3" action={action}>
               <Input name="username" placeholder="Masukin nama kosan lu" />
               <Button
                 disable={pending}
