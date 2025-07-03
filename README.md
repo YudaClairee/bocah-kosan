@@ -15,10 +15,10 @@ Bocah Kosan adalah aplikasi web yang ngebantu anak kos/rumah bareng buat ngatur 
 - **Next.js 15** (App Router, Server Actions)
 - **React 19**
 - **TailwindCSS**
-- **Radix UI** (komponen UI modern)
+- **Shadcn UI** (komponen UI modern)
 - **AppBackend.io** (backend API gratisan)
 - **Cookie-based session**
-- **AI Support** (lihat bawah)
+- **AI Support**
 
 ---
 
