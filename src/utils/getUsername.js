@@ -3,7 +3,11 @@ import { cookies } from "next/headers";
 
 export async function getUsername() {
   const cookieStore = await cookies();
-  const username = cookieStore.get("username").value;
+  const usernameCookie = cookieStore.get("username");
 
-  return username;
+  if (!usernameCookie || !usernameCookie.value) {
+    throw new Error("User belum login atau session sudah expired");
+  }
+
+  return usernameCookie.value;
 }

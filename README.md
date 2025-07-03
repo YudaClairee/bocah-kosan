@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bocah Kosan
 
-## Getting Started
+Web app buat manajemen tugas rumah tangga bareng temen sekosan. Biar ga ada lagi yang ngeles giliran bersih-bersih atau lupa tugas!
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📝 Deskripsi
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Bocah Kosan adalah aplikasi web yang ngebantu anak kos/rumah bareng buat ngatur dan bagi-bagi tugas harian. Semua penghuni bisa liat, nambah, edit, dan hapus tugas. Cocok buat 2-5 orang yang tinggal bareng biar urusan rumah ga ribet dan adil.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Teknologi yang Dipakai
 
-## Learn More
+- **Next.js 15** (App Router, Server Actions)
+- **React 19**
+- **TailwindCSS**
+- **Radix UI** (komponen UI modern)
+- **AppBackend.io** (backend API gratisan)
+- **Cookie-based session**
+- **AI Support** (lihat bawah)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Fitur
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Login tanpa password (cukup nama kosan)
+- Tambah, edit, hapus tugas
+- Status tugas: Belum, Progress, Selesai
+- Urgensi tugas: Santuy, Buruan
+- Validasi input biar ga ada data kosong
+- Logout & session management
+- Error handling yang user-friendly
+- Responsive & mobile friendly
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Cara Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone repo ini:**
+   ```bash
+   git clone <repo-url>
+   cd bocah-kosan
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Jalankan development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Akses di browser:**
+   [http://localhost:3000](http://localhost:3000)
+
+> Gak perlu setup database, semua data disimpan di AppBackend.io (gratisan, cocok buat demo/prototype)
+
+---
+
+## 🤖 Penjelasan AI Support
+
+Project ini didukung AI assistant (kayak Claude dan IBM Granite Model di Replicate) yang bisa:
+
+- Bantuin debugging & refactor kode
+- Kasih saran UX/UI
+- Jelasin error & solusi
+- Bantu setup, deploy, dan troubleshooting
+- Jawab pertanyaan teknis seputar stack yang dipakai
+
+AI ini bisa diakses langsung dari workspace (misal pakai Cursor, Copilot, dsb) dan siap bantuin develop project ini kapan aja. Jadi, kalau stuck atau mau improve fitur, tinggal tanya aja ke AI-nya!
+
+---
+
+Happy ngoding & semoga kosan makin rukun! 🚀

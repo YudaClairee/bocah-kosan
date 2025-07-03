@@ -13,7 +13,7 @@ const outfit = Outfit({
 });
 
 export default function Home() {
-  const [_, action, pending] = useActionState(loginAction, null);
+  const [state, action, pending] = useActionState(loginAction, null);
 
   return (
     <div className="max-w-3xl m-auto">
@@ -34,14 +34,25 @@ export default function Home() {
         </h2>
         <Card className="w-[350px]">
           <CardContent>
+            {/* Error message */}
+            {state?.success === false && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                {state.error}
+              </div>
+            )}
+
             <form className="space-y-3" action={action}>
-              <Input name="username" placeholder="Masukin nama kosan lu" />
+              <Input
+                name="username"
+                placeholder="Masukin nama kosan lu"
+                required
+              />
               <Button
-                disable={pending}
+                disabled={pending}
                 type="submit"
-                className="w-full bg-[#d97706] hover:opacity-40 hover:bg-[#d97706]"
+                className="w-full bg-[#d97706] hover:opacity-40 hover:bg-[#d97706] disabled:opacity-50"
               >
-                Login
+                {pending ? "Login..." : "Login"}
               </Button>
             </form>
           </CardContent>

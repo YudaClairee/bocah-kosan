@@ -2,6 +2,7 @@
 
 import { getUsername } from "@/utils/getUsername";
 import { revalidatePath } from "next/cache";
+import { API_BASE_URL } from "@/lib/constants";
 
 export async function createTugas(_, formData) {
   try {
@@ -16,16 +17,13 @@ export async function createTugas(_, formData) {
       throw new Error("Semua field harus diisi");
     }
 
-    const response = await fetch(
-      "https://v1.appbackend.io/v1/rows/O3KZ05PfZVtI",
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify([{ name, tugas, status, priority, username }]),
-      }
-    );
+    const response = await fetch(API_BASE_URL, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify([{ name, tugas, status, priority, username }]),
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -66,23 +64,20 @@ export async function updateTugas(_, formData) {
       throw new Error("Semua field harus diisi");
     }
 
-    const response = await fetch(
-      `https://v1.appbackend.io/v1/rows/O3KZ05PfZVtI`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _id: id,
-          name,
-          tugas,
-          status,
-          priority,
-          username,
-        }),
-      }
-    );
+    const response = await fetch(API_BASE_URL, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _id: id,
+        name,
+        tugas,
+        status,
+        priority,
+        username,
+      }),
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -108,16 +103,13 @@ export async function deleteTugas(_, formData) {
       throw new Error("ID tugas tidak ditemukan");
     }
 
-    const response = await fetch(
-      `https://v1.appbackend.io/v1/rows/O3KZ05PfZVtI`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify([id]),
-      }
-    );
+    const response = await fetch(API_BASE_URL, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([id]),
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
