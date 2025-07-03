@@ -59,7 +59,7 @@ Bocah Kosan adalah aplikasi web yang ngebantu anak kos/rumah bareng buat ngatur 
 
 ## 🤖 Penjelasan AI Support
 
-Project ini didukung AI assistant (kayak Claude dan IBM Granite Model di Replicate) yang bisa:
+Project ini didukung AI assistant (kayak Cursor AI dan IBM Granite Model di Replicate) yang bisa:
 
 - Bantuin debugging & refactor kode
 - Kasih saran UX/UI
